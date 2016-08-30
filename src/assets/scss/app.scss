@@ -352,7 +352,11 @@ table.bg-black {
   p{
     font-family: $heading-font-family;
     font-style: italic;
-    color: #7c7c7c;
+    font-size: $h5-font-size;
+
+    .gray-quote{
+      color: #7c7c7c;
+    }
   }
 }
 
