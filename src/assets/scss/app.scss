@@ -229,8 +229,12 @@ table.bg-black {
 
 .header {
   .sub-heading {
-    font-size: 14px;
-    margin-bottom: 0px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 5px;
   }
 }
 
@@ -294,8 +298,8 @@ table.bg-black {
 
 .section-title
 {
-  margin-bottom: 7px;
   th.columns {
+    padding-bottom: 5px;
     th {
       padding-top: 7px;
       padding-bottom: 0;
@@ -382,4 +386,12 @@ table.bg-black {
 .alert-text {
   color: $anchor-color;
   font-weight: bold;
+}
+
+p{word-break: keep-all;}
+
+.callout-inner p
+{
+  margin: 0 !important;
+  text-align: center;
 }

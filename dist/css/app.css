@@ -1426,8 +1426,11 @@ table.bg-black {
     color: #fe821f; }
 
 .header .sub-heading {
-  font-size: 14px;
-  margin-bottom: 0px; }
+  font-size: 16px;
+  margin-bottom: 0; }
+
+.header p {
+  margin-bottom: 5px; }
 
 .top-row {
   background: #e1dcd0; }
@@ -1469,8 +1472,8 @@ table.bg-black {
   background: #e1dcd0;
   border-collapse: initial; }
 
-.section-title, .section-title-large {
-  margin-bottom: 7px; }
+.section-title th.columns, .section-title-large th.columns {
+  padding-bottom: 5px; }
   .section-title th.columns th, .section-title-large th.columns th {
     padding-top: 7px;
     padding-bottom: 0;
@@ -1525,3 +1528,10 @@ table.bg-black {
 .alert-text {
   color: #af360e;
   font-weight: bold; }
+
+p {
+  word-break: keep-all; }
+
+.callout-inner p {
+  margin: 0 !important;
+  text-align: center; }
