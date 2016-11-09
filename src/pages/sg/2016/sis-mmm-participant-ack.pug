@@ -1,6 +1,6 @@
 - var img = "https://storage.googleapis.com/mail-attachments"
 - var subject = "Sadhguru in Singapore - Payment Confirmation"
-- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-assisted-receipt.html"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-assisted-ack.html"
 - function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
 
 mixin spacer
@@ -24,7 +24,7 @@ container
         columns(large="10",small="8")
             wrapper.header
                 p.heading.text-right Sadhguru in Singapore
-                p.sub-heading.text-right Booking Confirmation
+                p.sub-heading.text-right Booking Details
     hr
     row: columns
         p.header.highlight
