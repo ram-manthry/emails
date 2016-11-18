@@ -1306,6 +1306,10 @@ p.highlight {
   p.highlight small {
     color: #cc6600 !important; }
 
+p.highlight_red {
+  color:red !important; }
+
+
 span.highlight, li.highlight {
   color: #cc6600 !important; }
 
