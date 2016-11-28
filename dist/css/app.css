@@ -1533,8 +1533,7 @@ p {
   word-break: keep-all; }
 
 .callout-inner p {
-  margin: 0 !important;
-  text-align: center; }
+  margin: 0 !important; }
 
 p.h1 {
   font-size: 34px; }
