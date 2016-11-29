@@ -1570,3 +1570,6 @@ p.justify {
   .wrapper.box .wrapper-inner {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
+
+span.sans-serif {
+  font-family: Arial, Helvetica, sans-serif; }
