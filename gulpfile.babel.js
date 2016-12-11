@@ -12,7 +12,7 @@ import siphon   from 'siphon-media-query';
 const $ = plugins();
 const center = 'au';
 const year = '2016';
-const wip = 'sathsang-201612';
+const wip = 'MonthlyEmail';
 const wip_path = center + '/' + year + '/' + wip + '.html';
 const base = 'src/pages/';
 const src = base + wip_path;

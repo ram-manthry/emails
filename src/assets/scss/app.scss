@@ -372,6 +372,15 @@ table.bg-black {
   }
 }
 
+.orange-background-center{
+  background: $highlight;
+  color:white;
+  table.body, h1, h2, h3, h4, h5, h6, p, td, th, a{
+    color: white;
+    text-align:center;
+  }
+}
+
 .grey-background{
   background: #eee;
 }
