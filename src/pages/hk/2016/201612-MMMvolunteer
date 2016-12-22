@@ -7,10 +7,10 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
 
     {{> spacer }}
 
-    <row class="email-header">
+    <row class="collapse no-vpad">
         <columns large="2" small="4">
-            <wrapper >
-                <img src="http://www.ishafoundation.org/mumbai/newsletter/mar/img2/isha-foundation-logo-white.png" alt="" />
+            <wrapper  class="logo">
+                <img src="{{img}}/common/isha-logo.png" alt="" />
             </wrapper>
         </columns>
         <columns large="8" small="8">
@@ -18,6 +18,9 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
                 <span class="heading">MMM Volunteer Meet</span><br>
                 <span class="sub-heading">Sadhguru in Singapore (Jan 2017)</span><br>
             </wrapper>
+        </columns>
+        <columns large="2" class="month">
+            Dec 2016
         </columns>
     </row>
     {{> drop-shadow }}
