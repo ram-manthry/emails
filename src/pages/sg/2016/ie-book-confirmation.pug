@@ -1,0 +1,58 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Inner Engineering: A Yogi's Guide to Joy - Purchase Confirmation"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/ie-book-confirmation.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Inner Engineering Book
+                p.sub-heading.text-right Purchase Confirmation
+    hr
+    row: columns
+        p.header.highlight
+            | We are pleased to confirm the following purchase made by you:
+            br
+            h5 Inner Engineering - A Yogi's Guide to Joy
+            hr
+            p
+                | Name: !{_('FIRST_NAME')} !{_('LAST_NAME')}
+                br
+                | Contact: !{_('EMAIL')} / !{_('MOBILE_PHONE')}
+                br
+                | Address: !{_('VAR1')}
+                br
+                | Payment Amt: !{_('VAR2')}
+                br
+                | Payment Reference: !{_('VAR3')}
+            hr
+            p.
+                You will receive further information including delivery details, within 24 hrs.
+
+    row: columns.small
+            p.header.highlight Contact Details:
+            ul
+                li singapore@ishayoga.org
+                li +65-61004064
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
