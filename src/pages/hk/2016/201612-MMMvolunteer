@@ -1,16 +1,23 @@
 ---
 img: https://storage.googleapis.com/mail-attachments
-subject: "General Volunteer Meet 2016 and Sadhguru in Singapore (Jan 2017)"
+subject: "MMM Volunteer Meet 2016 - Sadhguru in Singapore (Jan 2017)"
 preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunteer.html
 ---
 <container>
 
+    <row class="collapse no-vpad top-row">
+        <columns small="6" medium="8" large="8">
+            <p class="text-right hidden-text">Sadhguru answers a question on raising human consciousness and Isha’s role in this process.....</p>
+        </columns>
+        <columns  small="6" medium="4" large="4" valign="middle">
+            <div id="view-on-web-link"><a href="#">Can't view email</a></div>
+        </columns>
+    </row>
     {{> spacer }}
-
-    <row class="collapse no-vpad">
+    <row class="email-header">
         <columns large="2" small="4">
             <wrapper  class="logo">
-                <img src="{{img}}/common/isha-logo.png" alt="" />
+                <img src="http://www.ishafoundation.org/mumbai/newsletter/mar/img2/isha-foundation-logo-white.png" alt="" />
             </wrapper>
         </columns>
         <columns large="8" small="8">
@@ -19,9 +26,7 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
                 <span class="sub-heading">Sadhguru in Singapore (Jan 2017)</span><br>
             </wrapper>
         </columns>
-        <columns large="2" class="month">
-            Dec 2016
-        </columns>
+
     </row>
     {{> drop-shadow }}
 
@@ -32,24 +37,33 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
             </wrapper>
         </columns>
     </row>
-
-    {{> spacer-white-small }}
-    <row>
-        <columns large="1" small="2" class="no-pad-right no-pad-left">
-            <img src="{{img}}/au/common/quote.png">
+    <row >
+        <columns>
+            <p >
+                <a class="section-title-large " href="http://isha.sadhguru.org/blog/sadhguru/masters-words/creating-wave-of-consciousness-around-world/">Creating a Wave of Consciousness</a>
+                <br>
+                <a class="section-title" href="http://isha.sadhguru.org/blog/sadhguru/masters-words/creating-wave-of-consciousness-around-world/">Sadhguru answers a question on raising human consciousness and Isha’s role in this process.</a>
+            </p>
         </columns>
+    </row>
+    {{> drop-shadow }}
+
+    <row class="orange-background">
+        <columns large="1" small="2" class="no-pad-right no-pad-left">
+            <img src="http://www.ishafoundation.org/mailmarketer/admin/temp/user/3/quote-white.png">
+        </columns>
+
         <columns large="10" small="9">
-            <p class="highlight small ">
+            <p class= "large bold">
                 <em>
                     Today, we are so technologically empowered that if we do the necessary work, we can sit here and talk to seven billion people. Never before was this possible. When all kinds of rubbish are reaching the entire world, it is high time spiritual process reaches the entire world too.
                 </em>
             </p>
-            <p class="text-right highlight">
+            <p class="text-right">
                 <em><strong>
                     - Sadhguru
                 </strong></em>
             </p>
-
         </columns>
         <columns large="1" small="1">
         </columns>
@@ -58,28 +72,43 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
     {{> spacer-white-small }}
     <row>
         <columns>
-            <p>Namaskaram</p>
+            <p class="highlight">Namaskaram</p>
+
+            <p>
+                We have <strong>less than a month</strong> remaining before the Meet, Mingle, and Meditate event with Sadhguru in January.
+            </p>
+            <p>
+                <strong> We want to share the status and also remind that this is the time to boost all our efforts in reaching out to people</strong> . We had a very fruitful discussion in last meeting and we would like to list down the key points below.
+             </p>
+
         </columns>
     </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
+            Status
+        </columns>
+    </row>
+    {{> spacer-white-small }}
     <row>
         <columns>
-            <p>
-                We have <strong>less than a month </strong> before the Meet, Mingle, and Meditate event with Sadhguru in January. As all of us eagerly await to be with Sadhguru in this event, <strong>we want to share the status and also remind that this is the time to boost all our efforts in reaching out to people</strong>. We had a very fruitful discussion in last meeting and we would like to list down the key points below.
-            </p>
-            <br>
-                <p class="highlight bold">Status </p>
                 <p>
-                We have crossed the enrolment of 2000 people for the event and based on our website reports, at least 8000 people have visited the booking site. Please keep in mind that usually one person registers for 2 people on an average.
+                    We have crossed the enrolment of 2000 people and based on website reports, at least 8000 people have visited the booking site. Please keep in mind that usually one person registers for 2 people on an average.
                 </p>
-                <p>
-                When we discussed this amongst us in last volunteer meeting as to why people have not registered in spite of visiting booking site, many responded that people have been thinking that it is too early to confirm for the event. On further probing, it was clear that for many, it’s not about early or late, it has still not become a priority. They are sitting on the edge.
-                </p>
-                <p>
-                Please note that we have festive offer available now for very limited time!
-                </p>
-            <br>
-                <p class="highlight bold">
-                So, what can we do to make it a priority?
+            <p class="bold">
+                So, there are a lot of people who are still waiting to register!</p>
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
+            What can each one of us do to inspire these people?
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
+            <p class="highlight bold" >
             </p>
             <p>
                 Word of mouth has always been the biggest source of many to get introduced to Sadhguru.
@@ -90,70 +119,200 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
             <p>
                 So let us reach out to all whom we know (and do not)! These can be people working under you, coworkers, friends, people on street and even people from nearby countries like Thailand, Indonesia etc!
             </p>
-            <br>
-        <p class="highlight bold">
-            WhatsApp
-        </p>
-            <p>
-                Spend few minutes daily to forward sadhguru’s content to those you know.
+        </columns>
+        </row>
+        <row>
+        <columns class="grey-background">
+             <p>
+                <br>
+                Please note that festive offer is available now for a very limited time!
             </p>
+        </columns>
+        </row>
+        <row>
+            <columns large="3" small="2">
+            </columns>
+            <columns large="4" small="6">
+                <center>
+                    <wrapper>
+                        <img src="https://storage.googleapis.com/mail-attachments/2016/generic/whatsapp.png" alt="" />
+                    </wrapper>
+                </center>
+            </columns>
+            <columns large="3" small="2">
+            </columns>
+        </row>
+        <row>
+            <columns>
+                <ul style="list-style-type: none;">
+                    <li><p class="highlight bold">Spend few minutes daily to forward sadhguru’s content.</p></li>
+                </ul>
+            </columns>
+        </row>
+    <row>
+        <columns>
             <p>
-                <em><strong>Sharing</strong></em> - one of the tamilnadu volunteers shared that recent isha yoga program in ashram by Sadhguru is a live example of how they reached out to 21k enrolment just using this simple tool WhatsApp and a simple feature broadcast list.
-            </p>
-            <p>
-                <em><strong>What is a broadcast list?</strong></em> - You can share any message with multiple people through WhatsApp with just one click if you have a broadcast list. Please note this is NOT a GROUP, which means they receive the message like one to one communication. However for them to receive it, they need to have your phone stored in their phonebook.
-            </p>
-            <p>
-                <em><strong>How to create a broadcast list?</strong></em> - Few of our volunteers created a simple video to highlight the importance of sharing Sadhguru’s words either in video or article through WhatsApp or Facebook. This has the potential of creating exponential reach if only we can invest time in this and it won’t take more than 5 mins.
-            </p>
-            <p>
-                Few of the sharing after volunteers learnt to create this list in last volunteer meet:
-            <ul>
-                <li>Create a broadcast list to send content to many in one click!</li>
-                <li>Send the content also to various whatsapp groups like university interest groups, apartment groups, moms group etc.</li>
-                <li>You can also share Facebook posts in other Facebook groups like expat groups etc.</li>
-            </ul>
-            </p>
+                <callout class="secondary">
+                <p class="highlight small"><em>Sharing:</em></p>
+                <p class="small">
+                    <em>
+                        "One of the tamilnadu volunteers shared that recent isha yoga program in ashram by Sadhguru is a live example of how they reached out to 21k enrolment just using this simple tool WhatsApp and a simple feature broadcast list."
+                    </em>
+                </p>
+                <p class="text-right small">
+                    <em>
+                        - As shared by one of Tamilnadu volunteer
+                    </em>
+                </p>
+                </callout>
+             </p>
+        </columns>
+    </row>
+    <row>
+        <columns>
+                <ul style="list-style-type: none;">
+                <li><p class="highlight bold">What is a broadcast list?</p></li>
+                <li>
+                    You can share any message with multiple people through WhatsApp with just one click if you have a broadcast list. Please note this is NOT a GROUP, which means they receive the message like one to one communication. However for them to receive it, they need to have your phone stored in their phonebook.
+                </li>
+                    <li><p class="highlight bold"><br>How to create a broadcast list?</p></li>
+                <li>
+                    Below is a video created by two volunteers to highlight how whatsapp sharing can make us reach thousands of people!
+                </li>
+                <li>Video Tutorial : <a href="https://youtu.be/NxBo2xzJpCg">video</a></li>
+                <li><a href="https://youtu.be/4kFFSMrYHIY">video</a></li>
+        </columns>
+    </row>
+    <row>
+        <columns>
+                <p><callout class="secondary">
+                <p class="highlight small"><em>Kuhanesan shares:</em></p>
+                <p class="small">
+                    <em>
+                        Namaskaram,I would like to share that I've just created my own Whatsapp broadcast list yesterday,have just sent the article on stress......and few ppl who have been hesitating to get the ticket,have actually been responding fast and want to purchase tickets immediately,so it's working.... Let's get this going🌀🌀🌀💦💦💦
+                        Let's all make it happen🌊🌊
+                    </em>
+                </p>
 
-            <p>
-                <em><strong>WhatsApp message content</strong></em> - Many of you must be receiving 5 mins volunteering messages since October. The idea of these messages was that all of us could forward the content further to our contacts (through broadcast list or selected contacts).
-            </p>
-            <p>
+                </callout>
+
+
+                <callout class="secondary">
+                <p class="highlight small"><em>Kalaivani shares:</em></p>
+                <p class="small">
+                    <em>
+                        During the volunteer meet on Sunday I raised my hand up when  asked who does not share the watsapp messages and I gave my reasons to it . Today I decided to challenge myself otherwise . And within 1 hour of posting I had 10 ticket requested to be booked on their behalf. These weren't family as I hv already bought them tickets earlier. Randomly picking friends whom I thought may be interested. It works 😊😊
+                    </em>
+                </p>
+                <p class="small">
+                <ul>
+                    <li class="small"><em>Create a broadcast list to send content to many in one click!</em></li>
+                    <li class="small"><em>Send the content also to various whatsapp groups like university interest groups, apartment groups, moms group etc.</em></li>
+                    <li class="small"><em>You can also share Facebook posts in other Facebook groups like expat groups etc.</em></li>
+                </ul>
+                </p>
+                </callout>
+
+        </columns>
+    </row>
+    <row class="grey-background">
+        <columns>
+            <ul style="list-style-type: none;">
+                <li><p class="highlight bold"><br>WhatsApp message content</p></li>
+
+            <li>
+                Many of you must be receiving 5 mins volunteering messages since October. The idea of these messages was that all of us could forward the content further to our contacts (through broadcast list or selected contacts).
+            </li>
+            <li>
                 However we received the feedback that either we have not understood the purpose of these messages or they are too long and monotonous and few don’t feel like forwarding these again. We also received various suggestions on how the content can be made very creative and interesting.
-            </p>
-            <p>
+            </li>
+            <li>
                 So, based on various suggestions, we have tweaked these messages to short yet simple and interesting. The idea of these messages is just to help you find the content. All of you can find this online anyhow in isha blog or youtube.
-            </p>
-            <p>
-                <strong>Select the right content for target audience based on kind of personality!</strong>
-            </p>
-            <p>
+            </li>
+
+                </ul>
+        </columns>
+    </row>
+    <row >
+        <columns>
+            <ul style="list-style-type: none;">
+                <li><p class="highlight bold">
+<br>
+                    Select the right content for target audience based on kind of personality!</p>
+                </li>
+            <li>
+
                 For those who are working professionals, something related to work life, productivity and success might be suitable while for housewives, food and body book, recipes, lifestyle related content will be more suitable. A lot of content is also very generic on which Sadhguru has spoken like new year resolutions, trump being selected which is the hot topic in news anyhow and can be easily forwarded to anyone without sounding too spiritual.
-            </p>
+            </li>
             <p>
-                Few volunteers also wanted to be part of the Social Media team which chooses the content, if any of you would like to contribute here, please contact Neelesh at +65 9101 4421
+                We have created a content repository now containing the most popular whatsapp content as suggested by various volunteers. Please use PInterest board to choose what you want to forward to different kinds of people.
             </p>
-        <br>
-        <p class="highlight bold">
+            <li>
+                Choose the content you want, add appropriate description and send tailored content to different contacts based on their persona!
+
+            </li>
+            <li>
+                Watch the video below to learn how to do this!
+            </li>
+                <li><a href="https://youtu.be/what video">video</a></li>
+            </ul>
+            </columns>
+        </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
             Share your experience with Sadhguru
-        </p>
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
             <p>
                 If coming in touch with Sadhguru has transformed your life in some way, isn’t it important to share with others? If we come across something good - good movie, good food, we do share then why not life transforming tools?
             </p>
             <p>
-                Many volunteers have started to share their experience with Sadhguru on Facebook, which is causing a silent and subtle effect on friends and relatives. For many who shared, their friends (or not) have commented/contacted wanting to know more about this. This is silently creating a curiosity amongst those not in touch, wanting to know.
+                <callout class="secondary">
+                <p class="highlight small"><em>Gaurav shares his experience with Sadhguru:</em></p>
+                <p class="small">
+                <em>
+                “ My first encounter with Sadhguru was through a video called Introduction to Inner Engineering that a friend forwarded.
+                At that point of time, I was not at all looking for a Guru. I thought I had figured out most of the things in life anyway. I was fairly successful in everything I had wanted to do. I also firmly believed that whatever I set my mind to, I can do it very well. At one level, this led to a certain lack of interest in the things around me as I didn't really find anything challenging anymore. I had well formulated theories about everything I could think of. And I had figured out life. So why would I need a Guru.
+                Then I came across this video where this guy with an impressive beard is talking about engineering yourself in a very scientific and logical way. It was hard to ignore his logic. This triggered my curiosity and I thought OK this guy deserves a bit of my time and attention. I'll go and listen to what he has to say. So I signed up for the Inner engineering course and started this simple practice.
+                My first physical encounter with him was at a evening sathsang in Ashram. The first sentence he uttered completely blew my mind. It was exactly something I was always running from but at the same time always knew to be true. He spoke about how if we don't go beyond the limitations of our mind we can't know life in its entirety. Mind is the only thing I had worked on till then, and I had seen it's limitations. After that he answered many questions people asked but it felt like everything was being said to me personally. I secretly thought that this is all a setup to get me here and tell me all these things I needed to hear. I wondered how he knew me so well. I wondered if he ever came to Chandigarh when I was a young boy and saw me and knew exactly who I was.
+                Then again I saw him at ashram at one more evening sathsang and while leaving he just looked at me once. It was just a glance, but I felt like he knew exactly who I am. Like he knew much more about me than myself. It's hard to forget the intensity in his eyes. Hard to forget and hard to explain.
+                Since then I've seen him only a few times in person but the intimacy of this bond has grown beautifully with time. What started as a pure intellectual pursuit, perhaps an intellectual challenge, has now evolved into a loving long distance relationship. In any normal circumstances one could call it one sided love affair. But with Sadhguru, it would be a big mistake to call it one sided.”
+                </em>
             </p>
+            </callout>
             <p>
-                Click <a href="link need">here</a> to read these sharings!
+                Click <a href="https://www.facebook.com/search/top/?q=%23myexperiencewithsadhguru">here</a> to read more such sharings!
             </p>
+
             <p>
-                We have also placed snippets of these sharings online - <a href="link need">link</a>
+                <strong>
+                So when Sadhguru is working tirelssly every moment as to how to reach out to all 7 billion people in this world, if your life has been transformed by this, all of us can contribute in this small way by at least sharing!
+                </strong>
             </p>
+        </columns>
+    </row>
+
+    <row class="grey-background">
+        <columns large="4" small="3">
+        </columns>
+        <columns large="3" small=5>
+            <center>
+                <wrapper><br>
+                    <img src="https://storage.googleapis.com/mail-attachments/2016/generic/facebook.png" alt="" />
+                </wrapper>
+            </center>
+        </columns>
+        <columns large="4" small="3">
+        </columns>
+    </row>
+    <row class="grey-background">
+        <columns>
             <p>
-                So when Sadhguru is looking at every moment on how to reach out to all 7 billion people in this world, working tirelessly towards this, if your life has been transformed by this, we need to contribute in this small way by at least sharing!
-            </p>
-            <p>
-            <ul>
+            <ul >
             <li>
                 Share your experience on facebook with hashtags <em>#MyExperienceWithSadhguru #SadhguruInSingapore</em> and <em>#SadhguruInMalaysia</em>
             </li>
@@ -161,19 +320,38 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
                 Nominate 5 more Isha friends to share their experience
             </li>
             </ul>
+            </p>
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
+            Inner Engineering Book
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
 
+        <p>
+            The book will be soon available online for sale! Please help in promoting the book via social media and sharing your own experience.
+        </p>
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
+            <a href="https://youtu.be/HryYsiKwK1c"><img src="http://img.youtube.com/vi/HryYsiKwK1c/0.jpg"></a>
+        </columns>
+        <columns>
 
-            </p>
-            <br>
-            <p class="highlight bold">
-            Inner Engineering book
-            </p>
-            <p>
-                The book will be soon available online for sale! Please help in promoting the book via social media and sharing your own experience.
-            </p>
-            <p class="highlight">
-                2 videos ?????????? @Nidhi akka these words seems wrong here
-            </p>
+            <a href="https://youtu.be/oHdP5WsVamE"><img src="http://img.youtube.com/vi/oHdP5WsVamE/0.jpg"></a>
+
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
             <p>
                 What you can do:
             <ul>
@@ -192,18 +370,21 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
 
             </ul>
             </p>
-            <br>
-            <p class="highlight bold">
-                Revamped website
-            </p>
-            <p>
-                We have now installed a Chat room on booking site, updated seating percentage? And also put snippets of few sharings from facebook. Please check the booking site!
-            </p>
 
-            <br>
-            <p class="highlight bold">
+        </columns>
+    </row>
+    {{> drop-shadow }}
 
+    <row class="section-title orange-background">
+        <columns>
             Offline tickets
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
+            <p class="highlight bold">
+
             </p>
             <p>
                 We received a feedback that due to lack of offline tickets to the event, we were not able to book many who had made up their mind or/and were not comfortable online. So, we have finally created offline tickets for both the chinese categories and last 2 categories.
@@ -216,185 +397,93 @@ preview: https://rawgit.com/ishacrm/emails/master/dist/hk/2016/201612-MMMvolunte
                 Carry these tickets with you for interested people, while distributing flyers!
             </li>
             </ul></p>
+
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
+            Revamped website
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
+            <p>
+                We have now installed a Chat room on booking site, updated seating occupancy and also put snippets of few sharings from facebook. Please check the booking site!
+            </p>
             <p>
                 Please contact Aravinth @ +65 8439 2892 for more details.
             </p>
-            <br>
-            <p class="highlight bold">
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    <row class="section-title orange-background">
+        <columns>
             Other ways
-            </p>
+        </columns>
+    </row>
+    {{> spacer-white-small }}
+    <row>
+        <columns>
+
+            <li><strong>WeChat chinese </strong>- Encourage your chinese friends to join this group to <a href="wechat link">spread</a> the word!
+            </li>
             <p>
-               <strong> WeChat chinese </strong>- Encourage your chinese friends to join this group to spread the word!
+                Download WeChat: <a href="https://www.wechat.com/en/">https://www.wechat.com/en/</a>
             </p>
+            <li>
+                <strong>Promotional materials</strong> - Various promotional materials like bilingual flyers, posters, standees, banners, t-shirts, bag tags are available.
+            </li>
             <p>
-                <strong>Promotional materials </strong>- Various promotional materials like bilingual flyers, posters, standees, banners, t-shirts, bag tags are available.
-            </p>
-            <p><ul>
+            <ul>
             <li>
                 Help in getting a stall/booth in any exhibition/fair/get-together in coming days to promote Jan event
             </li>
             <li>
-                Help in putting up posters in any condominiums or restaurants in below list
+                Help in putting up posters in any condominiums or restaurants
             </li>
-            </ul></p>
+            </ul>
             <p>
                 Please contact Ramesh @ +65 8209 5765 to collect them.
             </p>
-            <p>
-                <strong>Group/corporate seats </strong>- If you would like to approach your office or any club to conduct free isha kriya and upa yoga session as well as spread the awareness about Jan event or even sponsor seats for their employees, please contact Pradeip at +65 9791 3372 or Sriram at +65 9026 9239
-            </p>
+            <li>
+                <strong>Group/corporate seats</strong> - If you would like to approach your office or any club to conduct free isha kriya and upa yoga session as well as spread the awareness about Jan event or even sponsor seats for their employees, please contact Pradeip at +65 9791 3372 or Sriram at +65 9026 9239
+            </li>
+
             <p>
                 Please note that group discounts may be available if it is a large group.
             </p>
-            <p>
-            <table cellpadding="1" border="1">
-                <tr>
-                    <th>
-                        <strong>Condos</strong>
-                    </th>
-                    <th>
-                        <strong>Restaurants</strong>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        Costa Rhu
-                    </td>
-                    <td>
-                        Real Food
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        The Makena
-                    </td>
-                    <td>
-
-                        Anna Lakshmi
-                        <br>
-                        Changi business park restaurants
-
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Pebble Bay
-                    </td>
-                    <td>
-                        Muthu Curry
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        The Water Side
-                    </td>
-                    <td>
-                        Banana Leaf
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Melville Park
-                    </td>
-                    <td>
-                        Gayethri
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Park Vista
-                    </td>
-                    <td>
-                        Anjapper
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Mandarin Gardens
-                    </td>
-                    <td>
-                        Hyderabad restaurants
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Savannah Condopark
-
-                    </td>
-                    <td>
-                        Thulasi
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Horizon Towers
-                    </td>
-                    <td>
-                        Komala Vilas
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-
-                    </td>
-                    <td>
-                        Apollo chellappas
-                        <br>
-                        Kashmir restaurants
-                        <br>
-                        Sakunthala
-                        <br>
-                        Delhi restaurants
-                        <br>
-                        Jade of India
-                        <br>
-                        spice junction
-                        <br>
-                        Jaggi north India restaurants
-                        <br>
-                        Anna Lakshmi
-                        <br>
-                        Changi business park restaurants
-                        <br>
-                        Priorities are given above however there is another 100 more outreach restaurants <a href="Please insert code">here</a>
-                    </td>
-                </tr>
-
-            </table>
-
-
+        </columns>
+    </row>
+    <row class="grey-background">
+        <columns>
+            <p class="highlight bold">
+               <br> Webinar
             </p>
-            <p >
-               <strong> Flyers in office reception at Ascendas</strong>.
+            <ul style="list-style-type: none;">
+            <li>
+                If you know someone who is interested in volunteering, please ask them to register for volunteering soon! We will be closing volunteer registrations soon.
+            </li>
+            <li>
+                We are scheduling a webinar (online volunteer meet) for those who couldn’t join us last time! Please attend this to ensure you are updated. Details will be announced shortly!
+            </li>
+            </ul>
+
+            <p class="highlight bold">
+                WhatsApp Group
             </p>
-            <p >
-                <strong>Webinar</strong>
-            </p>
-            <p>
-                Since this volunteer meet was crucial for January event, we are scheduling a webinar (online volunteer meet) for those who couldn’t join us last time! If you know someone who is interested in volunteering, please ask them to register at this link and also register for the webinar.
-            </p>
-            <center>
-                <button href="docs link1 " class="text-center large radius orange">Register for volunteering</button>
-            </center>
-            <center>
-                <button href="docs link 2" class="text-center large radius orange">Register for online volunteer meet</button>
-            </center>
-            </p>
-            <p>
-                <strong>WhatsApp Group</strong>
-            </p>
-            <p>
+            <ul style="list-style-type: none;">
+            <li>
                 We have now created a bigger WhatsApp group for all event volunteers. If you are not part of it, please contact Neelesh at +65 9101 4421.
-            </p>
-            <p>
-                NOTE: Please note that you need to be available from Friday till Sunday night for the Jan event.
-            </p>
-            <p>
+            </li>
+            <li>
+                NOTE: Volunteers are required to make themselves available from 6 pm on Friday, 20 January 2017 until program windup around midnight on Sunday, 22 January 2017
+            </li>
+            <li>
                 Let us make it happen!
-            </p>
-            <p>
-            </p>
+            </li>
+            </ul>
         </columns>
     </row>
 
