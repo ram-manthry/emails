@@ -13,8 +13,10 @@ import pug      from 'gulp-pug';
 const $ = plugins();
 const center = 'sg';
 const year = '2016';
+
 const wip = 'sis-mmm-buyer-coupon';
 const wip_path = center + '/' + year + '/' + wip + '.pug';
+
 const base = 'src/pages/';
 const src = base + wip_path;
 const dist = 'dist/' + wip_path;
