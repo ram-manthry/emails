@@ -1,0 +1,64 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Singapore - Payment Confirmation"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-assisted-ack.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right Booking Details
+    hr
+    row: columns
+        p.header.highlight
+            | We are pleased to confirm the following booking made for you:
+            br
+            h5 Sadhguru in Singapore - Meet, Mingle, & Meditate
+            span on Sunday, Jan 22nd 2017 - 4pm to 8:45pm
+            hr
+            p
+                | Name: !{_('FIRST_NAME')} !{_('LAST_NAME')}
+                br
+                | Contact: !{_('EMAIL')} / !{_('MOBILE_PHONE')}
+                br
+                | Seating Category: !{_('VAR1')}
+                br
+                | Payment Amt: !{_('VAR2')}
+                br
+                | Payment Reference: !{_('VAR3')}
+            hr
+            p.
+                !{_('if VAR4')}
+                Your booking was done by !{_('VAR4')}
+                !{_('end')}
+                !{_('if VAR5')}
+                Your booking was assisted by: !{_('VAR5')} (!{_('VAR6')})
+                !{_('end')}
+
+    row: columns.small
+            p.header.highlight Please Note:
+            ul
+                li E-Ticket for your booking will be issued after Jan 10th.
+                li You need to bring a printout of the e-ticket and your photo id (NRIC/Passport) to gain entry into the event.
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer

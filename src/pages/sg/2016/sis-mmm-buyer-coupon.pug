@@ -1,0 +1,83 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Meet, Mingle, & Meditate - A Gift that keeps giving!"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-buyer-coupon.html"
+- function _(name) { return '{{{{raw}}}}{{{' + name + '}}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right Thank You!
+    hr
+    row: columns
+        p.heading.highlight THE GIFT
+        p Namaskaram,
+        p.
+            The path to yoga is a gift that keeps on giving.
+        p.
+            Since we first met Sadhguru and began our own journeys, we have looked for ways to share this with others.
+            And, in this giving we have been
+            #[a(href="http://isha.sadhguru.org/blog/sadhguru/spot/giving-the-ultimate-transaction/") nourished].
+        p.
+            As a part of this giving, to reward you for early confirmation of your participation in
+            #[a(href="https://ishayoga.sg/sis-2017") Meet, Mingle, & Meditate], we bring you a splendid opportunity to share this evening with Sadhguru with more of your
+            friends, family, and community.
+        p.
+            Until December 20, you can use or share the Coupon Codes below to avail discounts on various categories of
+            tickets. Enable those in your circle to be in Sadhguru’s presence. Gift them the extraordinary opportunity
+            to experience a natural state of freedom, love, and limitless joy. Don’t miss this chance to be nourished.
+            Share the gift that keeps on giving!
+        p.
+            With Love, #[br]
+            Isha Volunteers
+
+    hr
+    row.no-vpad: columns
+        p.heading.highlight THE CODES
+
+    row.no-vpad
+        columns
+        columns: center !{_('VAR1')}
+        columns
+    hr
+
+    row: columns
+        p.header.highlight THE GUIDELINES
+        ul
+            li Coupons will expire on December 20
+            li Each coupon gets a $10 discount for one new ticket booking
+            li Each coupon can only be used once
+            li Use coupons yourself or share them with friends & family
+            li Please keep the coupon code confidential
+            li Coupons have no monetary value and can be withdrawn without notice
+            li For more details on how to use the coupons, please refer to #[a(href="https://booking.ishayoga.sg/docs/sis-booking-guide.pdf") this link].
+        p.
+            You can view and manage your coupons on the Booking Portal.
+
+        row.no-vpad
+            columns
+            columns: center
+                button.radius.alert(href="https://booking.ishayoga.sg") Booking Portal
+            columns
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer

@@ -1,0 +1,64 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "萨古鲁在新加坡 - 订单详情"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-assisted-ack.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right 萨古鲁在新加坡
+                p.sub-heading.text-right 订单详情
+    hr
+    row: columns
+        p.header.highlight
+            | 我们很高兴地与您确认以下订单：
+            br
+            h5 萨古鲁在新加坡——遇见、融合与冥想
+            span 2017年1月22日（周日）16:00-20:45
+            hr
+            p
+                | 姓名: !{_('FIRST_NAME')} !{_('LAST_NAME')}
+                br
+                | 联系方式: !{_('EMAIL')} / !{_('MOBILE_PHONE')}
+                br
+                | 座位类别: !{_('VAR1')}
+                br
+                | 付款金额: !{_('VAR2')}
+                br
+                | 付款单号: !{_('VAR3')}
+            hr
+            p.
+                !{_('if VAR4')}
+                您的订单 !{_('VAR4')}
+                !{_('end')}
+                !{_('if VAR5')}
+                您的订单: !{_('VAR5')} (!{_('VAR6')})
+                !{_('end')}
+
+    row: columns.small
+            p.header.highlight 请注意:
+            ul
+                li 所有订单的电子票将在12月15日后发行。
+                li 入场时请出示电子票（打印版）和有效身份复印件（如护照）
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
