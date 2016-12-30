@@ -1390,6 +1390,11 @@ table.button.outline.orange {
     table.button.outline.orange table td a, table.button.outline.orange table td a:hover, table.button.outline.orange table td a:visited, table.button.outline.orange table td a:focus {
       color: #cc6600; }
 
+table.button.thin table td {
+  padding: 3px !important; }
+  table.button.thin table td a, table.button.thin table td a:hover, table.button.thin table td a:visited, table.button.thin table td a:focus {
+    padding: 2px 10px !important; }
+
 table.button.orange table td {
   background-color: #cc6600;
   border: 0; }
@@ -1472,9 +1477,9 @@ table.bg-black {
   background: #e1dcd0;
   border-collapse: initial; }
 
-.section-title th.columns, .section-title-large th.columns {
+.section-title th.columns, .section-title-large th.columns, .section-title-medium th.columns {
   padding-bottom: 5px; }
-  .section-title th.columns th, .section-title-large th.columns th {
+  .section-title th.columns th, .section-title-large th.columns th, .section-title-medium th.columns th {
     padding-top: 7px;
     padding-bottom: 0;
     font-family: Merriweather, Georgia;
@@ -1483,6 +1488,12 @@ table.bg-black {
 .section-title-large {
   font-size: 24px; }
   .section-title-large th.columns th {
+    padding-top: 10px; }
+
+.section-title-medium {
+  font-size: 20px;
+  font-weight: bold; }
+  .section-title-medium th.columns th {
     padding-top: 10px; }
 
 .section-text {
