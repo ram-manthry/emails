@@ -15,6 +15,9 @@ mixin drop-shadow
 mixin footer-sg
     include ../../../partials/footer-sg.pug
 
+mixin footer-sg-unsub
+    include ../../../partials/footer-sg-unsub.html
+
 container
     +spacer
     row.collapse.no-vpad
@@ -73,5 +76,5 @@ container
 
     +drop-shadow
     +spacer
-    +footer-sg
+    +footer-sg-unsub
     +spacer
