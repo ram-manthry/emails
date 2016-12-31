@@ -1588,3 +1588,6 @@ p.justify {
   .wrapper.box .wrapper-inner {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
+
+span.grey-highlight {
+  background-color: #ddd; }
