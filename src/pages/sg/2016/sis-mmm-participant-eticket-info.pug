@@ -1,0 +1,51 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Singapore - Booking Information"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-participant-eticket-info.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right Booking Information
+    hr
+    row: columns
+        p.highlight Dear !{_('FIRST_NAME')},
+
+        p
+            | We would like to inform you that the e-ticket for your booking will be sent to you via email on
+            strong  10th January.
+            |  Please note that bookings cannot be transferred after e-Ticket is issued.
+        p
+            |  You need to bring a printout of the e-ticket and your
+            strong  Photo ID (NRIC/Passport)
+            |  to gain entry into the event.
+
+    +drop-shadow
+
+    row.section-header: columns
+        | Festive Offer closes on 10th Jan
+    row
+        columns(small="6")
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
