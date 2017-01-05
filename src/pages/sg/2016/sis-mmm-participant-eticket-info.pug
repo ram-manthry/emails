@@ -9,6 +9,9 @@ mixin spacer
 mixin spacer-white
     include ../../../partials/spacer-white.html
 
+mixin spacer-white-small
+    include ../../../partials/spacer-white-small.html
+
 mixin drop-shadow
     include ../../../partials/drop-shadow.html
 
@@ -37,13 +40,31 @@ container
             |  You need to bring a printout of the e-ticket and your
             strong  Photo ID (NRIC/Passport)
             |  to gain entry into the event.
+        hr
+        p.highlight
+            strong Festive Offer closes on 10th Jan
+        p.
+            Please note that festive offer of 15% discount in select categories will close on 10th Jan.
 
     +drop-shadow
 
-    row.section-header: columns
-        | Festive Offer closes on 10th Jan
+    +spacer-white-small
+
     row
-        columns(small="6")
+        columns(large="4")
+            img(src=img+"/sg/sis-2017/IEBook-WA-Updated-font_SIN-300px.jpg")
+        columns(large="8")
+            p.highlight: strong Inner Engineering: A Yogi's Guide to Joy
+            p.small.
+                Inner Engineering is a guide to self-empowerment that relies on the teaching and principles of
+                classical yoga to help readers create an enduring foundation for inner stability and peace.
+            p.small.
+                Now available in Singapore: #[a(href="https://ishayoga.sg/ie-book") ishayoga.sg/ie-book]
+    +drop-shadow
+
+    row.collapse.no-vpad
+        columns
+            img(src=img+"/apac/whatsapp-sg.jpg")
 
     +drop-shadow
     +spacer
