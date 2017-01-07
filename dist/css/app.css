@@ -1328,6 +1328,10 @@ th.month {
   font-size: 22px;
   line-height: 30px; }
 
+.heading-small {
+  font-size: 18px;
+  line-height: 26px; }
+
 .sub-heading {
   font-size: 18px;
   line-height: 1em;
