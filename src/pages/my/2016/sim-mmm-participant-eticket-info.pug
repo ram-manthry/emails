@@ -1,6 +1,6 @@
 - var img = "https://storage.googleapis.com/mail-attachments"
-- var subject = "Sadhguru in Singapore - Booking Information"
-- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-participant-eticket-info.html"
+- var subject = "Sadhguru in Malaysia - Booking Information"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/my/2016/sim-mmm-participant-eticket-info.html"
 - function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
 
 mixin spacer
@@ -15,8 +15,8 @@ mixin spacer-white-small
 mixin drop-shadow
     include ../../../partials/drop-shadow.html
 
-mixin footer-sg
-    include ../../../partials/footer-sg.pug
+mixin footer-my
+    include ../../../partials/footer-my.pug
 
 container
     +spacer
@@ -26,7 +26,7 @@ container
                 img(src=img+"/common/isha-logo.png",alt="")
         columns(large="10",small="8")
             wrapper.header
-                p.heading.text-right Sadhguru in Singapore
+                p.heading.text-right Sadhguru in Malaysia
                 p.sub-heading.text-right Booking Information
     hr
     row: columns
@@ -53,23 +53,23 @@ container
 
     row
         columns(large="4")
-            img(src=img+"/sg/sis-2017/IEBook-WA-Updated-font_SIN-300px.jpg")
+            img(src=img+"/my/sim-2017/IEBook-WA-Updated-font_MY.jpg")
         columns(large="8")
             p.highlight: strong Inner Engineering: A Yogi's Guide to Joy
             p.small.
                 Inner Engineering is a guide to self-empowerment that relies on the teaching and principles of
                 classical yoga to help readers create an enduring foundation for inner stability and peace.
                 🔸 Read it 🔸 Share it 🔸 Gift it 🔸
-            button.text-center.small.radius.orange(href="https://www.ishayoga.sg/ie-book") Buy
+            button.text-center.small.radius.orange(href="http://malaysia.ishayoga.org/ie-book") Buy
 
 
     +drop-shadow
 
     row.collapse.no-vpad
         columns
-            img(src=img+"/apac/whatsapp-sg.jpg")
+            img(src=img+"/apac/whatsapp-my.jpg")
 
     +drop-shadow
     +spacer
-    +footer-sg
+    +footer-my
     +spacer
