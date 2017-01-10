@@ -1,0 +1,66 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Singapore - eTicket"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-eticket.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right E-Ticket Information
+    hr
+    row: columns
+        p.header.highlight
+            | E-Ticket Information
+        p
+            span.header.highlight Sadhguru in Singapore - Meet, Mingle, & Meditate
+            br
+            span on Sunday, Jan 22nd 2017 - 4pm to 8:45pm
+        callout.secondary
+            | Name: !{_('FIRST_NAME')} !{_('LAST_NAME')}
+            br
+            | Contact: !{_('EMAIL')} / !{_('MOBILE_PHONE')}
+            br
+            | Seating Category: !{_('VAR1')}
+            br
+            | Bay Number: #[strong !{_('VAR2')}]
+            br
+            | E-Ticket #: #[strong !{_('VAR3')}]
+
+    row
+        columns.small
+            p.header.highlight Terms & Conditions:
+            ul
+                li Participants should be 15 years or above in age
+                li eTicket is non refundable
+    row
+        columns.small
+            p.header.highlight Please Note:
+            ul
+                li Check-in counters open at 1pm
+                li You need to bring your photo ID (NRIC/Passport) to gain entry into the event
+                li
+                    | Please ensure you are seated in the hall by 3:45pm, as once the event starts
+                    | you will be allocated to the back bays within the respective seating category
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
