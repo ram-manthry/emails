@@ -1,5 +1,5 @@
 - var img = "https://storage.googleapis.com/mail-attachments"
-- var subject = "Sadhguru in Singapore - E-Ticket"
+- var subject = "Sadhguru in Malaysia - E-Ticket"
 - var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-eticket.html"
 - function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
 
@@ -23,16 +23,16 @@ container
                 img(src=img+"/common/isha-logo.png",alt="")
         columns(large="10",small="8")
             wrapper.header
-                p.heading.text-right Sadhguru in Singapore
+                p.heading.text-right Sadhguru in Malaysia
                 p.sub-heading.text-right E-Ticket Information
     hr
     row: columns
         p.header.highlight
             | E-Ticket Information
         p
-            span.header.highlight Sadhguru in Singapore - Meet, Mingle, & Meditate
+            span.header.highlight Sadhguru in Malaysia - Meet, Mingle, & Meditate
             br
-            span on Sunday, Jan 22nd 2017 - 4pm to 8:45pm
+            span on Sunday, Jan 21st 2017 - 4pm to 8:45pm
         callout.secondary
             | Name: !{_('FIRST_NAME')} !{_('LAST_NAME')}
             br
@@ -50,6 +50,7 @@ container
             ul
                 li Participants should be 15 years or above in age
                 li E-Ticket is non refundable
+                li Open only to non-muslims (in respect of local regulations)
     row
         columns.small
             p.header.highlight Please Note:
