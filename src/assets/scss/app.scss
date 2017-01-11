@@ -274,6 +274,10 @@ table.bg-black {
 
 .email-header
 {
+  background-color: #c0a27b !important;
+  -webkit-background-size: cover !important; /* For WebKit*/
+  -moz-background-size: cover !important;    /* Mozilla*/
+  background-size: cover !important;         /* Generic*/
   background: url("http://www.ishafoundation.org/mailmarketer/admin/temp/user/3/bg-image.png") no-repeat center;
   height: 130px;
   padding-top: 100px;
