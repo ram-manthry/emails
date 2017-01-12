@@ -1,6 +1,6 @@
 - var img = "https://storage.googleapis.com/mail-attachments"
 - var subject = "Sadhguru in Singapore - Payment Confirmation"
-- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-assisted-ack.html"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/sis-mmm-participant-ack.html"
 - function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
 
 mixin spacer
@@ -55,7 +55,8 @@ container
     row: columns.small
             p.header.highlight Please Note:
             ul
-                li E-Ticket for your booking will be issued after Jan 10th.
+                li E-Ticket for your booking will be automatically issued on Jan 19th.
+                li You can also ask the buyer !{_('VAR4')} to issue your eTicket from the booking portal.
                 li You need to bring a printout of the e-ticket and your photo id (NRIC/Passport) to gain entry into the event.
 
     +drop-shadow
