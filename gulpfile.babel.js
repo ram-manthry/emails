@@ -11,10 +11,10 @@ import siphon   from 'siphon-media-query';
 import pug      from 'gulp-pug';
 
 const $ = plugins();
-const center = 'hk';
-const year = '2016';
+const center = 'sg';
+const year = '2017';
 
-const wip = '201612-MMMvolunteer';
+const wip = 'mmm-last4day-dropped';
 const wip_path = center + '/' + year + '/' + wip + '.html';
 
 const base = 'src/pages/';
