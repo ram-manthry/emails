@@ -36,6 +36,14 @@ ul {
   }
 }
 
+ul.spaced-out {
+  margin-top: 6px;
+  li {
+    line-height: 1.5em;
+    margin-bottom: 6px;
+  }
+}
+
 .shadow {
   background-color: $body-background;
   width: $global-width;
@@ -117,6 +125,14 @@ th.month {
       padding-top: 5px;
       font-family: $heading-font-family;
       font-size: $h5-font-size;
+    }
+  }
+
+  th.columns.small {
+    th {
+      padding-top: 10px;
+      font-family: $heading-font-family;
+      font-size: $h6-font-size;
     }
   }
 }
