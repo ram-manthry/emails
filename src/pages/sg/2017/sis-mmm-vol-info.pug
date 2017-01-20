@@ -1,0 +1,76 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Singapore - Volunteering Information"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2017/sis-mmm-vol-info.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right Volunteering Information
+    hr
+    row: columns
+        p.highlight
+            | Dear !{_('FIRST_NAME')},
+        p.
+            Please note that all volunteers are required to be available from Sat morning till Sun midnight.
+            Once you arrive at the venue on Saturday, please check-in at the Volunteer Check-in desk at EXPO Hall 1.
+
+        p
+            strong Timings #[br]
+            ul
+                li Sat, 21 Jan - Starting at 8am
+                li Sun, 22 Jan - Starting at 7am
+
+            | We will be starting our activities with Guru Pooja on both days and request you to join us on time.
+
+    +drop-shadow
+
+    row.section-header: columns.small
+        | Venue Information
+    row: columns.small
+        p: strong Location: Singapore EXPO, Hall 1 #[br]
+        strong How to reach the venue:
+        ul.spaced-out
+            li By MRT: Alight at EXPO MRT Station and take Exit A
+            li By Bus: 12, 24 and 38
+            li Map: #[a(href="https://goo.gl/maps/E9MH7Z1f3Sz") Link]
+
+        | Click #[a(href="http://singaporeexpo.com.sg/directions-&-accessibility-Overview.php") here] for
+        | further information on directions to the venue.
+
+    +drop-shadow
+
+    row.section-header: columns.small
+        | Guidelines amd Useful Information
+    row: columns.small
+        strong What to bring/wear:
+        ul.spaced-out
+            li.
+                We encourage you to keep your valuables with you. Due to the nature of the program and the
+                number of people expected, we cannot guarantee the safekeeping of valuables.
+            li
+                | It is suggested that you wear comfortable smart casuals for the program.
+
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
