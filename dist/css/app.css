@@ -1286,6 +1286,12 @@ ul {
     line-height: 1.3em;
     margin-bottom: 6px; }
 
+ul.spaced-out {
+  margin-top: 6px; }
+  ul.spaced-out li {
+    line-height: 1.5em;
+    margin-bottom: 6px; }
+
 .shadow {
   background-color: #e1dcd0;
   width: 580px; }
@@ -1343,6 +1349,10 @@ th.month {
     padding-top: 5px;
     font-family: Merriweather, Georgia;
     font-size: 20px; }
+  .section-header th.columns.small th {
+    padding-top: 10px;
+    font-family: Merriweather, Georgia;
+    font-size: 18px; }
 
 .small, .small th, .small td, .small p {
   font-size: 14px; }

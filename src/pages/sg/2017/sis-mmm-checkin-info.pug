@@ -1,0 +1,103 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Singapore - Checkin Information"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2017/sis-mmm-checkin-info.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Singapore
+                p.sub-heading.text-right Checkin Information
+    hr
+    row: columns
+        p.highlight
+            | Dear !{_('FIRST_NAME')},
+        p.
+            We look forward to having you at the Meet, Mingle, & Meditate event with Sadhguru in Singapore.
+            Please note this email is only an informational email and you should bring your E-Ticket email to check in.
+
+        p.small
+            | If you have not yet received your E-Ticket via email, please contact us at singapore@ishayoga.org
+            | with the following details: #[br]
+        ul.small
+            li Buyer's email address
+            li Ticket Ref# displayed in the Buyer's dashboard
+
+    row: columns
+        callout.secondary.
+            #[strong Date:] Sunday, Jan 22, 2017 #[br]
+            #[strong Time:] 4pm to 8:45pm - #[em Check-in starts at 1pm]#[br]
+            #[strong Venue:] Singapore EXPO, Hall 1 #[br]
+            #[strong Contact:] singapore@ishayoga.org / +65-61004064
+
+    +drop-shadow
+
+    row.section-header: columns.small
+        | Venue Information
+    row: columns.small
+        strong How to reach the venue:
+        ul.spaced-out
+            li By MRT: Alight at EXPO MRT Station and take Exit A #[br]
+               | Please note walk from MRT Stn till Hall 1 may take upto 15 minutes. So, we request you to plan your arrival at venue accordingly.
+            li By Bus: 12, 24 and 38
+            li Map: #[a(href="https://goo.gl/maps/E9MH7Z1f3Sz") Link]
+
+        strong Parking
+        ul.spaced-out
+            li Public Car Park (accessible to cars only) is available
+            li
+                | Please note we have arranged for subsidized parking coupons with the venue: $13.50/- per day (Single Entry).
+                | These coupons will be available on a first-come first-serve basis at the "Car Park" counter.
+
+        | Click #[a(href="http://singaporeexpo.com.sg/directions-&-accessibility-Overview.php") here] for
+        | further information on directions to the venue.
+
+    +drop-shadow
+
+    row.section-header: columns.small
+        | Guidelines amd Useful Information
+    row: columns.small
+        strong Checking-in:
+        ul.spaced-out
+            li Upon arrival at EXPO, proceed to Checkin counters outside EXPO Hall 1.
+            li
+                | Checkin counters will open at #[strong 1:00 PM]#[br]
+                | Please ensure that you are seated in the hall by #[strong 3:45 PM], as once the event starts,
+                | to avoid disturbance to other participants, you will be seated in last bays.
+            li Carry your photo ID, with name matching the name on the E-Ticket.
+            li
+                | If ticket has been transferred and the transfer details have not been informed to us,
+                | please bring a signed authorisation letter from the original participant with your name and e-ticket number.
+
+        strong On-Spot Registrations & Upgrades:
+        ul.spaced-out
+            li
+                | New tickets can be booked on the spot from 1PM to 4PM on Sunday at the "Walk-in Registration" counter.
+                | Same applies if you wish to upgrade your seating category.
+
+        strong Additional notes
+        ul.spaced-out
+            li Please note that the program is open only for ages 15 and above.#[br]
+            li There is no particular dress code, but it is advisable to wear loose comfortable clothes.
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
