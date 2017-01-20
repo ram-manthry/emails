@@ -1,6 +1,6 @@
 - var img = "https://storage.googleapis.com/mail-attachments"
-- var subject = "Sadhguru in Singapore - Checkin Information"
-- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2017/sis-mmm-checkin-info.html"
+- var subject = "Sadhguru in Malaysia - Checkin Information"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/my/2017/sim-mmm-checkin-info.html"
 - function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
 
 mixin spacer
@@ -12,8 +12,8 @@ mixin spacer-white
 mixin drop-shadow
     include ../../../partials/drop-shadow.html
 
-mixin footer-sg
-    include ../../../partials/footer-sg.pug
+mixin footer-my
+    include ../../../partials/footer-my.pug
 
 container
     +spacer
@@ -23,29 +23,26 @@ container
                 img(src=img+"/common/isha-logo.png",alt="")
         columns(large="10",small="8")
             wrapper.header
-                p.heading.text-right Sadhguru in Singapore
+                p.heading.text-right Sadhguru in Malaysia
                 p.sub-heading.text-right Checkin Information
     hr
     row: columns
         p.highlight
             | Dear !{_('FIRST_NAME')},
         p.
-            We look forward to having you at the Meet, Mingle, & Meditate event with Sadhguru in Singapore.
+            We look forward to having you at the Meet, Mingle, & Meditate event with Sadhguru in Malaysia.
             Please note this email is only an informational email and you should bring your E-Ticket email to check in.
 
         p.small
-            | If you have not yet received your E-Ticket via email, please contact us at singapore@ishayoga.org
-            | with the following details: #[br]
-        ul.small
-            li Buyer's email address
-            li Ticket Ref# displayed in the Buyer's dashboard
+            | If you have not yet received your E-Ticket via email, please bring the booking confirmation email or
+            | payment receipt and proceed to the "Registration Help Desk" counter.
 
     row: columns
         callout.secondary.
-            #[strong Date:] Sunday, Jan 22, 2017 #[br]
+            #[strong Date:] Saturday, Jan 21, 2017 #[br]
             #[strong Time:] 4pm to 8:45pm - #[em Check-in starts at 1pm]#[br]
-            #[strong Venue:] Singapore EXPO, Hall 1 #[br]
-            #[strong Contact:] singapore@ishayoga.org / +65-61004064
+            #[strong Venue:] Mines Convention Center #[br]
+            #[strong Contact:] malaysia@ishafoundation.org
 
     +drop-shadow
 
@@ -54,20 +51,15 @@ container
     row: columns.small
         strong How to reach the venue:
         ul.spaced-out
-            li By MRT: Alight at EXPO MRT Station and take Exit A #[br]
-               | Please note walk from MRT Stn till Hall 1 may take upto 15 minutes. So, we request you to plan your arrival at venue accordingly.
-            li By Bus: 12, 24 and 38
-            li Map: #[a(href="https://goo.gl/maps/E9MH7Z1f3Sz") Link]
+            li By KTM: Alight at Serdang KTM Station #[br]
+            li By Bus: Metro bus no 2 and 22
+            li Map: #[a(href="https://www.google.com/maps/@2.9933601,101.7118908,16z") Link]
 
         strong Parking
         ul.spaced-out
-            li Public Car Park (accessible to cars only) is available
-            li
-                | Please note we have arranged for subsidized parking coupons with the venue: $13.50/- per day (Single Entry).
-                | These coupons will be available on a first-come first-serve basis at the "Car Park" counter.
-
-        | Click #[a(href="http://singaporeexpo.com.sg/directions-&-accessibility-Overview.php") here] for
-        | further information on directions to the venue.
+            li.
+                Public Car Park (accessible to cars only) is available #[br]
+                You can park at MIECC KL or Mines shopping centre and take the connection at level 4 to MIECC KL
 
     +drop-shadow
 
@@ -76,7 +68,7 @@ container
     row: columns.small
         strong Checking-in:
         ul.spaced-out
-            li Upon arrival at EXPO, proceed to Checkin counters outside EXPO Hall 1.
+            li Upon arrival at Mines CC, proceed to Checkin counters.
             li
                 | Checkin counters will open at #[strong 1:00 PM]#[br]
                 | Please ensure that you are seated in the hall by #[strong 3:45 PM], as once the event starts,
@@ -99,5 +91,5 @@ container
 
     +drop-shadow
     +spacer
-    +footer-sg
+    +footer-my
     +spacer
