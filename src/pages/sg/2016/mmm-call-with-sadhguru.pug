@@ -1,0 +1,80 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Call with Sadhguru for Jan event volunteers"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/mmm-call-with-sadhguru.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+mixin footer-sg-unsub
+    include ../../../partials/footer-sg-unsub.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Call with Sadhguru
+                p.sub-heading.text-right for January event volunteers
+    +drop-shadow
+
+    row.collapse.shadow.no-vpad
+        columns
+            a(href="//ishayoga.sg/sis-2017")
+                img(src=img + "/sg/sis-2017/email-banner-foc.jpg",alt="")
+
+    +spacer-white
+    row: columns
+        p.highlight
+            | Dear !{_('FIRST_NAME')},
+        p.
+            We have only 25 days remaining before we experience the presence of Sadhguru in Singapore on 22nd January.
+            As with any Isha event, big or small, it is the volunteers that contribute in making the event happen.
+            Due to the scale of the upcoming January event, we encourage as many people as possible to volunteer.
+        p
+            strong It is not necessary to book seats for the event if you want to volunteer.
+            |  However, if you have already booked seats, you can still volunteer.
+        p
+            | If you want to volunteer for this event, we urge you to finish your volunteer registration by
+            span.grey-highlight &nbsp;2nd January&nbsp;
+            | by clicking below.
+
+    row: columns
+        center
+            button.orange.small(href="https://ishayoga.sg/mmm-volunteering") Register for Volunteering
+
+    +drop-shadow
+
+    row.section-header: columns
+        | Call with Sadhguru for volunteers
+    row: columns
+        p.
+            Sadhguru will be speaking to all the event volunteers through a call on 3rd January.
+            More details will be sent soon to all the volunteers!
+
+    +drop-shadow
+
+    row.section-header: columns
+        | Festive offer - closes on 10th January
+    row: columns
+        p.
+            Please note that festive offer for Meet, Mingle, and Meditate event will be closing soon on 10th January.
+            Please spread the word to all whom you know so that they can avail of this opportunity.
+
+
+    +drop-shadow
+    +spacer
+    +footer-sg-unsub
+    +spacer

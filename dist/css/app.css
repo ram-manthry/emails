@@ -1286,6 +1286,12 @@ ul {
     line-height: 1.3em;
     margin-bottom: 6px; }
 
+ul.spaced-out {
+  margin-top: 6px; }
+  ul.spaced-out li {
+    line-height: 1.5em;
+    margin-bottom: 6px; }
+
 .shadow {
   background-color: #e1dcd0;
   width: 580px; }
@@ -1328,6 +1334,10 @@ th.month {
   font-size: 22px;
   line-height: 30px; }
 
+.heading-small {
+  font-size: 18px;
+  line-height: 26px; }
+
 .sub-heading {
   font-size: 18px;
   line-height: 1em;
@@ -1339,6 +1349,10 @@ th.month {
     padding-top: 5px;
     font-family: Merriweather, Georgia;
     font-size: 20px; }
+  .section-header th.columns.small th {
+    padding-top: 10px;
+    font-family: Merriweather, Georgia;
+    font-size: 18px; }
 
 .small, .small th, .small td, .small p {
   font-size: 14px; }
@@ -1389,6 +1403,11 @@ table.button.outline.orange {
     border: 0; }
     table.button.outline.orange table td a, table.button.outline.orange table td a:hover, table.button.outline.orange table td a:visited, table.button.outline.orange table td a:focus {
       color: #cc6600; }
+
+table.button.thin table td {
+  padding: 3px !important; }
+  table.button.thin table td a, table.button.thin table td a:hover, table.button.thin table td a:visited, table.button.thin table td a:focus {
+    padding: 2px 10px !important; }
 
 table.button.orange table td {
   background-color: #cc6600;
@@ -1447,6 +1466,13 @@ table.bg-black {
       font-family: Arial, Helvetica, sans-serif; }
 
 .email-header {
+  background-color: #c0a27b !important;
+  -webkit-background-size: cover !important;
+  /* For WebKit*/
+  -moz-background-size: cover !important;
+  /* Mozilla*/
+  background-size: cover !important;
+  /* Generic*/
   background: url("http://www.ishafoundation.org/mailmarketer/admin/temp/user/3/bg-image.png") no-repeat center;
   height: 130px;
   padding-top: 100px; }
@@ -1472,9 +1498,9 @@ table.bg-black {
   background: #e1dcd0;
   border-collapse: initial; }
 
-.section-title th.columns, .section-title-large th.columns {
+.section-title th.columns, .section-title-large th.columns, .section-title-medium th.columns {
   padding-bottom: 5px; }
-  .section-title th.columns th, .section-title-large th.columns th {
+  .section-title th.columns th, .section-title-large th.columns th, .section-title-medium th.columns th {
     padding-top: 7px;
     padding-bottom: 0;
     font-family: Merriweather, Georgia;
@@ -1483,6 +1509,12 @@ table.bg-black {
 .section-title-large {
   font-size: 24px; }
   .section-title-large th.columns th {
+    padding-top: 10px; }
+
+.section-title-medium {
+  font-size: 20px;
+  font-weight: bold; }
+  .section-title-medium th.columns th {
     padding-top: 10px; }
 
 .section-text {
@@ -1517,6 +1549,13 @@ table.bg-black {
   .orange-background table.body, .section-header table.body, .orange-background h1, .section-header h1, .orange-background h2, .section-header h2, .orange-background h3, .section-header h3, .orange-background h4, .section-header h4, .orange-background h5, .section-header h5, .orange-background h6, .section-header h6, .orange-background p, .section-header p, .orange-background td, .section-header td, .orange-background th, .section-header th, .orange-background a, .section-header a {
     color: white; }
 
+.orange-background-center {
+  background: #cc6600;
+  color: white; }
+  .orange-background-center table.body, .orange-background-center h1, .orange-background-center h2, .orange-background-center h3, .orange-background-center h4, .orange-background-center h5, .orange-background-center h6, .orange-background-center p, .orange-background-center td, .orange-background-center th, .orange-background-center a {
+    color: white;
+    text-align: center; }
+
 .grey-background, .program-details {
   background: #eee; }
 
@@ -1533,8 +1572,7 @@ p {
   word-break: keep-all; }
 
 .callout-inner p {
-  margin: 0 !important;
-  text-align: center; }
+  margin: 0 !important; }
 
 p.h1 {
   font-size: 34px; }
@@ -1571,3 +1609,9 @@ p.justify {
   .wrapper.box .wrapper-inner {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
+
+span.grey-highlight {
+  background-color: #ddd; }
+
+span.red-font {
+  color: #ff3315; }

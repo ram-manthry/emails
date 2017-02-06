@@ -1,0 +1,65 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Sadhguru in Malaysia - Payment Confirmation"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/my/2016/sis-mmm-participant-ack.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-my
+    include ../../../partials/footer-my.pug
+
+container
+    +spacer
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img+"/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Sadhguru in Malaysia
+                p.sub-heading.text-right Booking Details
+    hr
+    row: columns
+        p.header.highlight
+            | We are pleased to confirm the following booking made for you:
+            br
+            h5 Sadhguru in Malaysia - Meet, Mingle, & Meditate
+            span on Saturday, Jan 21st 2017 - 4pm to 8:45pm
+            hr
+            p
+                | Name: !{_('FIRST_NAME')} !{_('LAST_NAME')}
+                br
+                | Contact: !{_('EMAIL')} / !{_('MOBILE_PHONE')}
+                br
+                | Seating Category: !{_('VAR1')}
+                br
+                | Payment Amt: !{_('VAR2')}
+                br
+                | Payment Reference: !{_('VAR3')}
+            hr
+            p.
+                !{_('if VAR4')}
+                Your booking was done by !{_('VAR4')}
+                !{_('end')}
+                !{_('if VAR5')}
+                Your booking was assisted by: !{_('VAR5')} (!{_('VAR6')})
+                !{_('end')}
+
+    row: columns.small
+            p.header.highlight Please Note:
+            ul
+                li E-Ticket for your booking will be automatically issued on Jan 19th.
+                li You can also ask the buyer !{_('VAR4')} to issue your eTicket from the booking portal.
+                li You need to bring a printout of the e-ticket and your photo id (NRIC/Passport) to gain entry into the event.
+
+    +drop-shadow
+    +spacer
+    +footer-my
+    +spacer

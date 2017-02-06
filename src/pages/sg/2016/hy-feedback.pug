@@ -1,0 +1,54 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Hatha Yoga program - Feedback"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2016/hy-feedback.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    +spacer-white
+    row: columns
+        p.highlight Namaskaram !{_('FIRST_NAME')},
+        p.justify
+            | Greetings from Isha Singapore!
+            br
+            | We hope you enjoyed the Hatha Yoga program last weekend and getting comfortable with the practices.
+        p.justify.
+            Please take a few minutes to submit the feedback form.
+
+    row.no-vpad
+        columns
+        columns
+            button.outline.orange.small(href="https://goo.gl/96Tnz5") Feedback Form
+        columns
+
+    row: columns
+        p.justify.
+            Your feedback is valuable to us and will help in enhancing
+            the experience of future programs.
+        hr
+        p.
+            For any practice related questions, you can contact us at #[a(mailto:singapore@ishayoga.org) singapore@ishayoga.org]
+            / +65-61004064
+    +drop-shadow
+
+    row.collapse.no-vpad: columns
+        wrapper
+            a(href="https://ishayoga.sg/sis-2017")
+                img(src=img+"/sg/sis-2017/email-banner-normal.jpg",alt="")
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
