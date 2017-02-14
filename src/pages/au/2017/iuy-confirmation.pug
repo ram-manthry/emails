@@ -1,0 +1,119 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Isha Upa Yoga Confirmation"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/au/2017/iy-confirmation.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-au
+    include ../../../partials/footer-au.pug
+
+container
+    +spacer
+    row.collapse.no-vpad: columns
+        a(href="//ishayoga.org.au/isha-upa-yoga"): img(src=img + "/iuy/conf-email/iuy-conf-email-banner.jpg",alt="")
+
+    +spacer-white
+    row: columns
+        p.highlight Dear !{_('FIRST_NAME')},
+        p.justify
+            | Thank you for registering for the !{_('PROGRAM_NAME')} program.
+            br
+            | You may use this email as a confirmation for your registration.
+            br
+            | Kindly take note of the program details and do&nbsp;
+            a(href="mailto:australia@ishafoundation.org?subject=Reg {{{{raw}}}}{{PROGRAM_NAME)}{{{{/raw}}}}" +
+              " registration (Id {{{{raw}}}}{{REGISTRATION_ID{{{{/raw}}}})") contact us
+            | &nbsp;for any clarifications.
+        p.justify
+            | You are welcome to bring along anyone above 7 years of age to this session and
+            | register them on the spot.
+    hr
+    row.no-vpad
+        columns(large=1)
+        columns(large=10)
+            p: strong Participant Details
+            p.small: strong !{_('FIRST_NAME')} !{_('LAST_NAME')}
+            p.small
+                strong Email Address:
+                |  !{_('EMAIL')}
+                br
+                strong Contact Number(s):
+                |  !{_('MOBILE_PHONE')} !{_('HOME_PHONE')} !{_('OFFICE_PHONE')}
+            hr
+
+        columns(large=1)
+
+    row
+        columns(large=1)
+        columns(large=10)
+            p: strong Program Details
+            p.small: strong Venue
+            | !{_('VENUE')}
+            | !{_('#if MAP_LINK')}
+            a(href="{{{{raw}}}}{{MAP_LINK}}{{{{/raw}}}}") [MAP]
+            | !{_('/if')}
+            p.small
+                strong Address:
+                |  !{_('ADDRESS')}
+                br
+                strong Date & Time:#[br]
+                | !{_('#each SESSIONS')}
+                | !{_('this.DAY')} : !{_('this.START_TIME')} to !{_('this.END_TIME')} #[br]
+                | !{_('each')}
+
+        columns(large=1)
+
+    +drop-shadow
+
+    row.section-header: columns
+        | What is Isha Upa Yoga?
+    row
+        columns
+            p.small-15.
+                Just five minutes a day can transform your life! Whether you're seeking health and
+                 joy or peace and love, whether it's success in the world or inner exploration
+                 you're striving for, these simple practices are designed to help you cut
+                 through the struggle and walk through life with ease.
+
+    block-grid(up="5")
+        columns
+            a(href="https://www.youtube.com/watch?v=uhWr1jCXgKw")
+                img(src="https://storage.googleapis.com/mail-attachments/iuy/conf-email/iuyh-play-thumbnail.png")
+        columns
+            a(href="https://www.youtube.com/watch?v=J69NF6aXY6s")
+                img(src="https://storage.googleapis.com/mail-attachments/iuy/conf-email/iuyj-play-thumbnail.png")
+        columns
+            a(href="https://www.youtube.com/watch?v=MLpb8ee3Ypc")
+                img(src="https://storage.googleapis.com/mail-attachments/iuy/conf-email/iuys-play-thumbnail.png")
+        columns
+            a(href="https://www.youtube.com/watch?v=BUCYjed-3Jo")
+                img(src="https://storage.googleapis.com/mail-attachments/iuy/conf-email/iuyl-play-thumbnail.png")
+        columns
+            a(href="https://www.youtube.com/watch?v=ng9pFkb3nko")
+                img(src="https://storage.googleapis.com/mail-attachments/iuy/conf-email/iuyp-play-thumbnail.png")
+
+    row: columns
+        p.small-15.
+            Designed by Sadhguru and conducted in few thousand cities, towns and villages worldwide, these workshops
+            intend to bring the timeless benefits of Yoga to every human being on the planet. Practices taught include
+            invigorating physical postures (Sadilaja and Yoga Namaskar), breathing methods (Kriya), Nada Yoga and Meditation.
+        ul.condensed.small-15
+            li Strengthens and stabilizes the spine, can relieve back pain, stress & anxiety.
+            li Can relieve from chronic ailments and improves overall health.
+            li Does not require any fitness level or previous exposure to yoga.
+            li Practices taught can be done anywhere between 5 to 21 minutes.
+        p.small-15.
+            When doing these practices, a light stomach is recommended (1.5-hour gap after food).
+
+    +drop-shadow
+
+    +footer-au
+    +spacer
