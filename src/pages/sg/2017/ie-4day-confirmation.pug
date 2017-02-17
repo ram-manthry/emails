@@ -43,7 +43,7 @@ container
     row: columns
         callout.secondary
             p.highlight Program Details
-            p: strong Session Timings
+            p.small: strong Session Timings
             ul.small
                 | !{_('#each SESSIONS')}
                 li !{_('this.DAY')} : !{_('this.START_TIME')} to !{_('this.END_TIME')} #[br]
