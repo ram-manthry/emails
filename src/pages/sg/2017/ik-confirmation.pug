@@ -55,11 +55,12 @@ container
         columns(large=1)
         columns(large=10)
             p: strong Program Details
-            p.small: strong Venue
-            | !{_('VENUE')}
-            | !{_('#if MAP_LINK')}
-            a(href="{{{{raw}}}}{{MAP_LINK}}{{{{/raw}}}}") [MAP]
-            | !{_('/if')}
+            p.small
+                strong Venue:
+                |  !{_('VENUE')}
+                |  !{_('#if MAP_LINK')}&nbsp;
+                a(href="{{{{raw}}}}{{{MAP_LINK}}}{{{{/raw}}}}") [MAP]
+                | !{_('/if')}
             p.small
                 strong Address:
                 |  !{_('ADDRESS')}
@@ -74,7 +75,7 @@ container
     +drop-shadow
 
     row.section-header: columns
-        | What is Isha Kriya?
+        h5 What is Isha Kriya?
     row
         columns(large="7")
             p
