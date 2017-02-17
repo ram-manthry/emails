@@ -29,8 +29,8 @@ container
             | You may use this email as a confirmation for your registration.
             br
             | Kindly take note of the program details and do&nbsp;
-            a(href="mailto:hongkong@ishafoundation.org?subject=Reg {{{{raw}}}}{{PROGRAM_NAME)}{{{{/raw}}}}" +
-              " registration (Id {{{{raw}}}}{{REGISTRATION_ID{{{{/raw}}}})") contact us
+            a(href="mailto:hongkong@ishafoundation.org?subject=Reg {{{{raw}}}}{{PROGRAM_NAME}}{{{{/raw}}}}" +
+              " registration (Id {{{{raw}}}}{{REGISTRATION_ID}}{{{{/raw}}}})") contact us
             | &nbsp;for any clarifications.
         p.justify
             | You are welcome to bring along anyone above 7 years of age to this session and
@@ -55,11 +55,12 @@ container
         columns(large=1)
         columns(large=10)
             p: strong Program Details
-            p.small: strong Venue
-            | !{_('VENUE')}
-            | !{_('#if MAP_LINK')}
-            a(href="{{{{raw}}}}{{MAP_LINK}}{{{{/raw}}}}") [MAP]
-            | !{_('/if')}
+            p.small
+                strong Venue:
+                |  !{_('VENUE')}
+                |  !{_('#if MAP_LINK')}&nbsp;
+                a(href="{{{{raw}}}}{{{MAP_LINK}}}{{{{/raw}}}}") [MAP]
+                | !{_('/if')}
             p.small
                 strong Address:
                 |  !{_('ADDRESS')}
@@ -67,14 +68,14 @@ container
                 strong Date & Time:#[br]
                 | !{_('#each SESSIONS')}
                 | !{_('this.DAY')} : !{_('this.START_TIME')} to !{_('this.END_TIME')} #[br]
-                | !{_('each')}
+                | !{_('end')}
 
         columns(large=1)
 
     +drop-shadow
 
     row.section-header: columns
-        | What is Isha Upa Yoga?
+        h5 What is Isha Upa Yoga?
     row
         columns
             p.small-15.
