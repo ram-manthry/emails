@@ -1,0 +1,94 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Welcome to Inner Engineering Total program"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2017/ie-4day-confirmation.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+
+    +spacer
+
+    row.collapse.no-vpad
+        columns(large="2",small="4")
+            wrapper.logo
+                img(src=img + "/common/isha-logo.png",alt="")
+        columns(large="10",small="8")
+            wrapper.header
+                p.heading.text-right Inner Engineering Total (4 Day)
+                p.sub-heading.text-right Program Registration
+
+    +drop-shadow
+    +spacer-white
+    row: columns
+        p.highlight Dear !{_('FIRST_NAME')},
+        p.
+            Welcome to Inner Engineering!<br>
+            You are now registered for the Inner Engineering Total (4 Day) program in Singapore.
+        p
+            | Please take some time to read the information below thoroughly as it includes important details about the program.
+            br
+            u Please note the venue has been changed to Sri Veeramakaliamman Temple.
+
+    row: columns
+        callout.secondary
+            p.highlight Program Details
+            p.small: strong Session Timings
+            ul.small
+                | !{_('#each SESSIONS')}
+                li !{_('this.DAY')} : !{_('this.START_TIME')} to !{_('this.END_TIME')} #[br]
+                | !{_('end')}
+            hr
+            p.small
+                strong Venue:
+                |  !{_('VENUE')}
+                |  !{_('#if MAP_LINK')}&nbsp;
+                a(href="{{{{raw}}}}{{{MAP_LINK}}}{{{{/raw}}}}") [MAP]
+                | !{_('/if')}
+                br
+                strong Address:
+                |  !{_('ADDRESS')}
+                br
+            hr
+            p
+                span.small Please note that:
+                ul.small
+                    li Attendance for all the sessions is mandatory.
+                    li Doors will close at the session start time and latecomers will be not be allowed inside the hall.
+
+        p.highlight Additional Information
+        ul.small
+            li Breakfast and lunch will be provided on Saturday & Sunday.
+            li Please wear loose comfortable clothing and bring a yoga mat or a cushion to sit comfortably on the floor.
+
+    +drop-shadow
+    row.section-header
+        columns: h5 Preparation for the Program
+    row: columns
+        p We encourage you to practice Isha Kriya meditation as it will be a supportive tool to prepare you for the program.
+        p.
+            Isha Kriya is a free, simple and powerful meditation, which has been specially designed by Sadhguru and can be
+            accessed online at <a href="//www.ishakriya.com">www.ishakriya.com</a> or by downloading the
+            <a href="http://app.sadhguru.org">mobile application</a> through Google Play / iTunes Store. <br>
+            Feel free to share Isha Kriya with family and friends as well.
+        p We look forward to seeing you at the program.
+        p
+            | Pranam,
+            br
+            | Isha Volunteers
+
+    +drop-shadow
+    +spacer
+    +footer-sg
+    +spacer
+

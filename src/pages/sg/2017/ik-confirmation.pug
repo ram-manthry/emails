@@ -1,0 +1,105 @@
+- var img = "https://storage.googleapis.com/mail-attachments"
+- var subject = "Isha Kriya Confirmation"
+- var preview = "https://rawgit.com/ishacrm/emails/master/dist/sg/2017/ik-confirmation.html"
+- function _(name) { return '{{{{raw}}}}{{' + name + '}}{{{{/raw}}}}'; }
+
+mixin spacer
+    include ../../../partials/spacer.html
+
+mixin spacer-white
+    include ../../../partials/spacer-white.html
+
+mixin drop-shadow
+    include ../../../partials/drop-shadow.html
+
+mixin footer-sg
+    include ../../../partials/footer-sg.pug
+
+container
+    +spacer
+    row.collapse.no-vpad: columns
+        a(href="//ishayoga.sg/isha-kriya"): img(src=img + "/ik/ik-conf-email-banner.jpg",alt="")
+
+    +spacer-white
+    row: columns
+        p.highlight Dear !{_('FIRST_NAME')},
+        p.justify
+            | Thank you for registering for the !{_('PROGRAM_NAME')} program.
+            br
+            | You may use this email as a confirmation for your registration.
+            br
+            | Kindly take note of the program details and do&nbsp;
+            a(href="mailto:singapore@ishayoga.org?subject=Reg {{{{raw}}}}{{PROGRAM_NAME}}{{{{/raw}}}}" +
+              " registration (Id {{{{raw}}}}{{REGISTRATION_ID}}{{{{/raw}}}})") contact us
+            | &nbsp;for any clarifications.
+        p.justify
+            | You are welcome to bring along anyone above 12 years of age to this session and
+            | register them on the spot.
+    hr
+    row.no-vpad
+        columns(large=1)
+        columns(large=10)
+            p: strong Participant Details
+            p.small: strong !{_('FIRST_NAME')} !{_('LAST_NAME')}
+            p.small
+                strong Email Address:
+                |  !{_('EMAIL')}
+                br
+                strong Contact Number(s):
+                |  !{_('MOBILE_PHONE')} !{_('HOME_PHONE')} !{_('OFFICE_PHONE')}
+            hr
+
+        columns(large=1)
+
+    row
+        columns(large=1)
+        columns(large=10)
+            p: strong Program Details
+            p.small
+                strong Venue:
+                |  !{_('VENUE')}
+                |  !{_('#if MAP_LINK')}&nbsp;
+                a(href="{{{{raw}}}}{{{MAP_LINK}}}{{{{/raw}}}}") [MAP]
+                | !{_('/if')}
+            p.small
+                strong Address:
+                |  !{_('ADDRESS')}
+                br
+                strong Date & Time:#[br]
+                | !{_('#each SESSIONS')}
+                | !{_('this.DAY')} : !{_('this.START_TIME')} to !{_('this.END_TIME')} #[br]
+                | !{_('end')}
+
+        columns(large=1)
+
+    +drop-shadow
+
+    row.section-header: columns
+        h5 What is Isha Kriya?
+    row
+        columns(large="7")
+            p
+                | Rooted in the timeless wisdom of the yogic sciences,
+                | Isha Kriya is a simple yet potent process created by Sadhguru.
+            p
+                | Daily practice of Isha Kriya brings health, dynamism, peace and wellbeing.
+
+        columns(large="5")
+            a(href="https://www.youtube.com/watch?v=9rBxmGg1KDU")
+                img(src=img+"/ik/ik-play-thumbnail.png")
+
+    row: columns
+        p.
+            This meditation can be learned in one session and requires an investment of 12 to 18
+            minutes per day. It has the potential to transform the life of anyone who is willing
+            to incorporate it into their everyday life.
+        ul.condensed
+            li Powerful tool to cope with the hectic pace of modern life.
+            li Easy to fit into daily life.
+            li No previous experience of yoga is necessary.
+            li Can even be done seated in a chair.
+
+    +drop-shadow
+
+    +footer-sg
+    +spacer
