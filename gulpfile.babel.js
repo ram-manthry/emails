@@ -13,7 +13,7 @@ import pug      from 'gulp-pug';
 const $ = plugins();
 const center = 'nz';
 const year = '2017';
-const wip = 'sathsang-201702';
+const wip = 'sathsang-201703';
 const wip_path = center + '/' + year + '/' + wip + '.html';
 
 const base = 'src/pages/';
