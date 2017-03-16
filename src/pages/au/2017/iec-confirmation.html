@@ -1,0 +1,74 @@
+---
+img: https://storage.googleapis.com/mail-attachments
+subject: "Welcome to Inner Engineering Completion program"
+preview: https://rawgit.com/ishacrm/emails/master/dist/au/2017/ie-4day-confirmation.html
+---
+<container>
+
+    {{> spacer }}
+
+    <row class="collapse no-vpad">
+        <columns large="2" small="4">
+            <wrapper class="logo">
+                <img src="{{img}}/common/isha-logo.png" alt="" />
+            </wrapper>
+        </columns>
+        <columns large="10" small="10">
+            <wrapper class="header">
+                <p class="heading text-right">Inner Engineering Completion</p>
+                <p class="sub-heading text-right">Program Registration</p>
+            </wrapper>
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    <row>
+        <columns>
+            <spacer size="16"></spacer>
+        </columns>
+    </row>
+    <row>
+        <columns>
+            <p class="highlight">Dear {{{{raw}}}}{{FIRST_NAME}}{{{{/raw}}}},</p>
+            <p>
+                Welcome to Inner Engineering!</p>
+            <p>
+                You are now registered for the Inner Engineering Completion program in Australia. Further details will be sent closer to the program.
+            </p>
+            <p class="bold">
+                Please note that completion of Inner Engineering Online is a pre-requisite for you to attend this program.
+            </p>
+
+        </columns>
+    </row>
+    <row>
+        <columns>
+            <callout class="secondary">
+                <p class="highlight">Program Details</p>
+                <p>Session Timings:</p>
+                <ul class="small">
+                {{{{raw}}}}{{#each SESSIONS}}{{{{/raw}}}}
+                <li>{{{{raw}}}}{{this.DAY}}{{{{/raw}}}}: {{{{raw}}}}{{this.START_TIME}}{{{{/raw}}}} to {{{{raw}}}}{{this.END_TIME}}{{{{/raw}}}}</li>
+                {{{{raw}}}}{{/each}}{{{{/raw}}}}
+                </ul>                
+                <hr>
+                <p><strong>Venue:</strong> {{{{raw}}}}{{VENUE}}{{{{/raw}}}} {{{{raw}}}}{{#if MAP_LINK}}{{{{/raw}}}}
+                [<a href="{{{{raw}}}}{{MAP_LINK}}{{{{/raw}}}}">MAP</a>]
+                {{{{raw}}}}{{/if}}{{{{/raw}}}}<br>
+                <strong>Address:</strong> {{{{raw}}}}{{ADDRESS}}{{{{/raw}}}}</p>
+            </callout>
+            <p>We look forward to seeing you at the program.</p>
+            <p>
+                Pranam,<br>
+                Isha Volunteers
+            </p>
+        </columns>
+    </row>
+    {{> drop-shadow }}
+    {{> spacer }}
+
+    {{> footer-au }}
+
+    {{> spacer }}
+
+
+</container>
