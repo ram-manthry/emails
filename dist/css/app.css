@@ -1345,10 +1345,12 @@ th.month {
 
 .section-header {
   margin-bottom: 15px; }
-  .section-header th.columns th {
-    padding-top: 5px;
-    font-family: Merriweather, Georgia;
-    font-size: 20px; }
+  .section-header th.columns {
+    padding-bottom: 0; }
+    .section-header th.columns th {
+      padding-top: 5px;
+      font-family: Merriweather, Georgia;
+      font-size: 20px; }
   .section-header th.columns.small th {
     padding-top: 10px;
     font-family: Merriweather, Georgia;
